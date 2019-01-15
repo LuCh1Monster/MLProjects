@@ -42,3 +42,4 @@ Lda = gensim.models.ldamodel.LdaModel
 ldamodel = Lda(doc_term_matrix, num_topics=3, id2word = dictionary, passes=50)
 
 print(ldamodel.print_topics(num_topics=3, num_words=3))
+

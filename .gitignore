@@ -112,3 +112,8 @@ venv.bak/
 *.iml
 out
 gen
+
+# myfiles
+LDA/data/*
+LDA/stopwords.txt
+LDA/config.py
