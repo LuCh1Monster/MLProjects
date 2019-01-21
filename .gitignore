@@ -117,3 +117,5 @@ gen
 LDA/data/*
 LDA/stopwords.txt
 LDA/config.py
+LDA/results/*
+LDA/PPT/*
