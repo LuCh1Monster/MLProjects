@@ -18,7 +18,8 @@ tbs = []
 for filename in files[:1]:
     df = pd.read_csv(filename)
 
-    suggest_words = ['拍拍贷', '上海拍拍贷', '合肥拍拍贷', '长沙拍拍贷', '拍拍贷法务部']
+    suggest_words = ['拍拍贷', '上海拍拍贷', '合肥拍拍贷', '长沙拍拍贷', '拍拍贷法务部',
+                     '打个电话', '打电话', '上海拍拍贷法务部']
     for word in suggest_words:
         jieba.suggest_freq(word, True)
 
@@ -56,6 +57,6 @@ for filename in files[:1]:
     data = pyLDAvis.sklearn.prepare(lda, cntTf, cntVector)
     pyLDAvis.show(data, open_browser=True, ip='172.20.7.199', port=8888)
 
-# df_all = pd.DataFrame(tbs, columns=['ownerid', 'topic'])
-# df_all.to_csv('./results/all.csv', index=False, encoding='utf8')
-# print(df_all.head())
+df_all = pd.DataFrame(tbs, columns=['ownerid', 'topic'])
+df_all.to_csv('./results/allWithoutScore.csv', index=False, encoding='utf8')
+print(df_all.head())
